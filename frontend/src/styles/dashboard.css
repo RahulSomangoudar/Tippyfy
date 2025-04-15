@@ -1,0 +1,110 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #FFF0DC; /* Light Cream */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+/* Dashboard Layout */
+.dashboard {
+    display: flex;
+    flex-direction: row; /* Sidebar and content side by side on desktop */
+    width: 100%;
+    height: 100vh;
+}
+
+/* Main container */
+.main {
+    display: flex;
+    flex-grow: 1;
+}
+
+/* Content Area */
+.content {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 200px; /* Space for sidebar (default) */
+    transition: margin-left 0.3s ease-in-out;
+}
+
+.content h2 {
+    font-size: 28px;
+    color: #543A14; /* Dark Brown */
+    margin-bottom: 10px;
+    text-align: center;
+    word-wrap: break-word;
+    max-width: 90%; /* Prevents text from overflowing */
+}
+
+.content p {
+    font-size: 16px;
+    color: #131010; /* Deep Black */
+    max-width: 100%;
+    text-align: center;
+    word-wrap: break-word;
+    white-space: normal;
+    padding: 0 20px; /* Adds some spacing */
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 200px;
+    background-color: #131010; /* Deep Black */
+    color: #FFF0DC; /* Light Cream */
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding-top: 80px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Sidebar Visible on Desktop */
+@media screen and (min-width: 769px) {
+    .sidebar {
+        transform: translateX(0);
+    }
+}
+
+/* Hide Sidebar by default on mobile */
+@media screen and (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%);
+        position: fixed;
+        z-index: 1000;
+    }
+
+    .content {
+        margin-left: 0; /* Ensure full width usage on mobile */
+        padding: 20px;
+        width: 80%;
+    }
+}
+
+/* Adjust for smaller screens */
+@media screen and (max-width: 480px) {
+    .content h2 {
+        font-size: 22px;
+        max-width: 100%;
+    }
+
+    .content p {
+        font-size: 14px;
+        max-width: 100%;
+        padding: 0 15px; /* Ensure spacing without clipping */
+    }
+
+    .content {
+        padding: 15px;
+    }
+}

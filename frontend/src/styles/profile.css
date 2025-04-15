@@ -1,0 +1,67 @@
+/* Profile Content */
+.profile-content {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+    margin-left: 200px;
+}
+
+/* QR Code & Button Stack */
+.qr-container {
+    display: flex;
+    flex-direction: column; /* Stack items */
+    align-items: center;
+    gap: 15px; /* Space between QR and button */
+    text-align: center;
+}
+
+.qr-code {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* QR Download Button */
+.qr-download-btn {
+    background: #F0BB78;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.qr-download-btn a {
+    text-decoration: none;
+    color: white;
+}
+
+.qr-download-btn:hover {
+    background: #543A14;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .profile-content {
+        height: auto;
+        padding: 20px;
+        margin-left: -1px;
+        margin-top: -100%;
+    }
+
+    .qr-code {
+        width: 200px;
+        height: 200px;
+    }
+
+    .qr-download-btn {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}

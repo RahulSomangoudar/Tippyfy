@@ -1,0 +1,161 @@
+/* Ensure Proper Visibility & Scrolling */
+body, html {
+  width: 100%;
+  min-height: 100vh; /* Use min-height instead of fixed height */
+  overflow-x: hidden; /* Prevent unwanted horizontal scroll */
+  margin: 0;
+  padding: 0;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5f5f5; /* Light background */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #543A14; /* Dark brown */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8A6F44; /* Lighter brown on hover */
+}
+
+/* About Section */
+.about-container {
+  text-align: center;
+  padding: 60px 20px;
+  max-width: 900px;
+  min-height: auto; /* Allow content to expand naturally */
+  border-radius: 12px;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(-50px); /* Start position */
+  animation: slideIn 0.8s ease-in-out forwards 0.3s; /* Delayed start */
+  overflow: hidden; /* Prevents content overflow */
+  margin: 100px auto 0; /* Adjust margin to fit below Navbar */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers content */
+  align-items: center;
+  margin-top: 400px;
+}
+
+/* Headings */
+.about-container h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: #543A14; /* Dark Brown */
+}
+
+.about-container h2 {
+  font-size: 2rem;
+  color: #F0BB78; /* Warm Accent */
+  margin-top: 20px;
+}
+
+/* Paragraphs */
+.about-container p {
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 1.7;
+  padding: 0 20px; /* Ensure text has proper spacing */
+}
+
+/* List Styling */
+.about-container ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: left;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.about-container li {
+  font-size: 1.2rem;
+  margin: 12px 0;
+  padding-left: 28px;
+  position: relative;
+  color: #543A14;
+  font-weight: 500;
+}
+
+.about-container li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #F0BB78; /* Accent */
+  font-weight: bold;
+}
+
+/* Sliding Animation */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .about-container {
+    padding: 40px 15px;
+    max-width: 90%;
+    margin-top: 450px; /* Adjusted margin to fit properly */
+  }
+
+  .about-container h1 {
+    font-size: 2.2rem;
+  }
+
+  .about-container h2 {
+    font-size: 1.8rem;
+  }
+
+  .about-container p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    padding: 0 10px;
+  }
+
+  .about-container li {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about-container {
+    padding: 30px 10px;
+    width: 95%;
+    margin-top: 450px;
+  }
+
+  .about-container h1 {
+    font-size: 1.8rem;
+  }
+
+  .about-container h2 {
+    font-size: 1.6rem;
+  }
+
+  .about-container p {
+    font-size: 1rem;
+    padding: 0 15px;
+  }
+
+  .about-container li {
+    font-size: 1rem;
+  }
+
+  .last{
+    margin-bottom: 70px;
+  }
+}

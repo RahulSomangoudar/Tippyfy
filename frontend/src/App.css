@@ -1,0 +1,42 @@
+/* Import Nunito Font */
+@import url('https://fonts.cdnfonts.com/css/the-aesthetic-essential');
+
+/* Apply Nunito font globally */
+* {
+  font-family: "Trebuchet MS", sans-serif; 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px; /* Scrollbar width */
+}
+
+/* Scrollbar Track */
+::-webkit-scrollbar-track {
+  background: #F0E5D8; /* Light beige background */
+  border-radius: 10px;
+}
+
+/* Scrollbar Thumb */
+::-webkit-scrollbar-thumb {
+  background: #543A14; /* Dark Brown */
+  border-radius: 10px;
+  border: 2px solid #F0E5D8; /* Adds a nice border effect */
+}
+
+/* Scrollbar Thumb Hover Effect */
+::-webkit-scrollbar-thumb:hover {
+  background: #8C6239; /* Slightly lighter brown for hover */
+}
+
+

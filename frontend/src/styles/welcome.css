@@ -1,0 +1,138 @@
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #FFF0DC; /* Light Cream */
+  color: #131010; /* Deep Black */
+  overflow-x: hidden; /* Prevents horizontal scroll */
+}
+
+/* Welcome Section */
+.welcome-container {
+  text-align: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  animation: slideIn 0.8s ease-in-out forwards 0.2s; /* Delay added */
+}
+
+/* Heading Animation */
+.welcome-container h1 {
+  font-size: 4em;
+  color: #543A14; /* Dark Brown */
+  margin-bottom: -15px;
+}
+
+.welcome-container h3 {
+  color: #543A14; /* Dark Brown */
+  font-size: 1.5em;
+  animation: slideIn 0.8s ease-in-out forwards 0.2s;
+  margin: 30px 0 20px ;
+}
+
+
+/* Button Group */
+.btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  animation: slideIn 0.8s ease-in-out forwards 0.4s;
+}
+
+.btn {
+  padding: 10px 12px;
+  font-size: 1em;
+  text-decoration: none;
+  color: #3c290e; /* Deep Brown */
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease;
+  background-color: #F0BB78; /* Warm Orange */
+}
+
+.btn:hover {
+  background-color: #3c290e;
+  color: #FFF0DC;
+  transform: scale(1.05);
+}
+
+/* Typing Effect */
+.typing-text {
+  font-size: 3em;
+  color: #543A14; /* Dark Brown */
+  margin-bottom: -15px;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+}
+
+/* Cursor Blinking */
+.cursor {
+  font-weight: normal;
+  font-size: 1.2em;
+  color: #543A14;
+  animation: blinkCursor 0.8s infinite;
+}
+
+/* Cursor Blink Animation */
+@keyframes blinkCursor {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Slide-in Animation */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Slide-in Animation */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px); /* Moves from left */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+ 
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .welcome-container h1 {
+    font-size: 2.5em;
+    top: 50%;
+  }
+
+  .btn {
+    font-size: 1em;
+    padding: 10px 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .welcome-container h1 {
+    font-size: 2em;
+  }
+
+  .btn {
+    font-size: 0.9em;
+    padding: 8px 16px;
+  }
+}

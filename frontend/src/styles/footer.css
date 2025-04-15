@@ -1,0 +1,45 @@
+/* Footer Styling */
+.footer {
+  width: 100%;
+  background-color: #543a14; /* Dark Brown */
+  color: #fff0dc; /* Light Cream */
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.foot {
+  font-size: 18px;
+  color: #fff0dc;
+}
+
+/* Link Styling */
+.footer a {
+  color: #f0bb78; /* Warm Orange */
+  text-decoration: underline;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.footer a:hover {
+  color: #fff0dc; /* Light Cream */
+  text-decoration: underline;
+}
+
+/* Responsive Footer */
+@media screen and (max-width: 480px) {
+  .footer {
+    font-size: 12px;
+    padding: 8px;
+  }
+  .foot {
+    font-size: 14px;
+  }
+}
