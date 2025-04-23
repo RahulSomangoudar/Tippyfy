@@ -4,14 +4,14 @@ import { getAuth } from "firebase/auth";
 
 // Firebase config
 const firebaseConfig = {
-  apiKey: "AIzaSyCG4oVp1-vQMcju7Mt3MzDmyogbio-CooQ",
-  authDomain: "tippy-fy.firebaseapp.com",
-  databaseURL: "https://tippy-fy-default-rtdb.firebaseio.com",
-  projectId: "tippy-fy",
-  storageBucket: "tippy-fy.firebasestorage.app",
-  messagingSenderId: "883776598956",
-  appId: "1:883776598956:web:103d7f24fc9d44dacb8009",
-  measurementId: "G-7Z2MWK5D88"
+  apiKey: "",
+  authDomain: "",
+  databaseURL: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: "",
+  measurementId: ""
 };
 
 // Initialize Firebase
